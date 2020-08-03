@@ -9,7 +9,7 @@ void bubble(int a[], int n)
 {
     for(int i = 0; i < (n - 1); i++)
     {
-        for(int j = i; j < (n - 1); j++)
+        for(int j = 0; j < (n - 1 - i); j++)
         {
             if (a[j] > a[j+1])
             {
@@ -26,9 +26,9 @@ void bubble1(int a[], int n)
     bool exchange;
     for(int i = 0; i < (n - 1); i++)
     {
-        exchange = false;
-        for(int j= i; j < (n - 1); j++)
+        for(int j= 0; j < (n - i -1); j++)
         {
+            exchange = false;
             if(a[j] > a[j+1])
             {
                 exchange = true;
@@ -36,9 +36,9 @@ void bubble1(int a[], int n)
                 a[j+1] = a[j] - a[j+1];
                 a[j] = a[j] - a[j+1];
             }
+            if (exchange = true ) break;
         }
         
-        if(exchange = true) break;
     }
 }
 

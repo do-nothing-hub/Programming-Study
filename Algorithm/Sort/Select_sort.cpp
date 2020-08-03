@@ -7,7 +7,7 @@ int num[10000];
 
 void select(int a[], int n)
 {
-    for(int i = 0; i < ((n/2) + 1); i++)
+    for(int i = 0; i < (n/2); i++)
     {
         int max = 0;
         int maxn = 0;
